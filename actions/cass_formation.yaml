@@ -1,0 +1,14 @@
+---
+name: cass_formation
+runner_type: mistral-v2
+description: "spins 3 node cassandra cluster . spins and intigrate sensu, stackstom and consul with the cluster"
+enabled: true
+pack: cassandra
+entry_point: workflows/cass_formation.yaml
+parameters:
+  ansible_server:
+    type: string
+    required: true
+    default : 10.20.16.196
+    description: "ansible server detail"
+

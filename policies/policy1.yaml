@@ -1,0 +1,10 @@
+---
+name: cassandra.retry
+description: Retry core.http action on timeout.
+enabled: true
+resource_ref: cassandra.start_cassandra
+policy_type: action.retry
+parameters:
+    retry_on: failure
+    max_retry_count: 2
+    delay: 2
